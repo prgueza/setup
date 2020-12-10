@@ -1,0 +1,132 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "2113a6b4-1574-474f-902e-b980e7977135"
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+    "atom-ide-diagnostics-ui": {}
+    use:
+      "atom-ide-diagnostics-ui": "never"
+  "autocomplete-paths":
+    scopes: [
+      {
+        prefixes: [
+          "import\\s+.*?from\\s+['\"]"
+          "require\\(['\"]"
+          "define\\(\\[?['\"]"
+          "jest.mock\\(['\"]"
+        ]
+        projectRelativePath: false
+        replaceOnInsert: [
+          [
+            ".vue$"
+            ""
+          ]
+          [
+            ".jsx?$"
+            ""
+          ]
+          [
+            ".ts$"
+            ""
+          ]
+          [
+            ".coffee$"
+            ""
+          ]
+        ]
+        scopes: [
+          "source.js"
+        ]
+      }
+    ]
+  core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "linter"
+      "pigments"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "Jetbrains Mono, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    lineHeight: 2
+    preferredLineLength: 160
+    showIndentGuide: true
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "086991c6-6e8f-4258-af74-17e43cc0667e"
+  "file-types":
+    ".pretierrc": "source.yaml"
+  "fuzzy-finder":
+    scoringSystem: "fast"
+    useRipGrep: true
+  "highlight-selected":
+    hideHighlightOnSelectedWord: true
+    highlightBackground: true
+  "language-dotenv":
+    dotenvFileNames: [
+      ".env.local"
+      ".env.staging"
+      ".env.development"
+      ".env.production"
+    ]
+  "linter-eslint":
+    autofix:
+      fixOnSave: true
+      ignoreFixableRulesWhileTyping: true
+      rulesToDisableWhileFixing: [
+        "no-debugger"
+      ]
+    disabling:
+      disableWhenNoEslintConfig: false
+    lintHtmlFiles: true
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.flow"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
+  "linter-ui-default":
+    showPanel: true
+  "markdown-preview":
+    useGitHubStyle: true
+  minimap:
+    absoluteMode: true
+    minimapScrollIndicator: false
+    plugins:
+      "lens-mode": false
+      "lens-modeDecorationsZIndex": 0
+  "minimap-lens":
+    lensHeight: 500
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+      showInStatusBar: true
+    prettierEslintOptions:
+      prettierLast: true
+    useEditorConfig: false
+  "spell-check":
+    locales: [
+      "en-US"
+      "es-ES"
+    ]
+    useLocales: false
+  "todo-show":
+    ignoreThesePaths: [
+      "node_modules"
+      "vendor"
+      "bower_components"
+      "*.pdf"
+      "dist"
+    ]
+    sortAscending: false
+    statusBarIndicator: true
+  "tree-view":
+    autoReveal: true
+  welcome:
+    showOnStartup: false

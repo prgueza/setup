@@ -1,0 +1,49 @@
+#!/bin/sh
+
+CONFIG_FILE="/usr/local/bin/.proxy.config"
+STATUS=$1
+
+if ! [ -f "$CONFIG_FILE" ]; then
+	echo > $CONFIG_FILE
+fi
+
+source "$CONFIG_FILE"
+
+function printHelp {
+	printf "\nUsage: proxy [ on | off | config | help ] \n\n"
+	printf "Commands: \n\n"
+	printf "on \t\t turn on proxy configuration for git and npm \n"
+	printf "off \t\t turn off proxy configuration for git and npm \n"
+	printf "config \t\t set a new username and password \n"
+	printf "help \t\t output usage information \n\n"
+}
+
+if [ -z "$USERNAME" ] || [ -z "$PASSWORD" ] || [ "$STATUS" = "config" ]; then
+	printf "username: "
+	read USERNAME
+	printf "password: "
+	read -s PASSWORD
+	echo "USERNAME=$USERNAME" > "$CONFIG_FILE"
+	echo "PASSWORD=$PASSWORD" >> "$CONFIG_FILE"
+	printf "\n"
+	STATUS="on"
+fi
+
+if [ "$STATUS" = "on" ]; then
+	npm config set proxy http://proxy.indra.es:8080
+	npm config set https-proxy http://proxy.indra.es:8080
+	printf "\n\xE2\x9C\x94  Proxy setup for npm\n"
+	git config --global http.proxy http://"$USERNAME":"$PASSWORD"@proxy.indra.es:8080
+	printf "\xE2\x9C\x94  Proxy setup for git\n"
+	printf "\n\xF0\x9F\x8D\x95  Proxy is on!\n\n"
+elif [ "$STATUS" = "off" ]; then
+	npm config rm proxy
+	npm config rm https-proxy
+	printf "\n\xE2\x9C\x94  Proxy unset for npm\n"
+	git config --global --unset https.proxy
+	git config --global --unset http.proxy
+	printf "\xE2\x9C\x94  Proxy unset for git\n"
+	printf "\n\xF0\x9F\x8D\x9F  Proxy is off!\n\n"
+else
+	printHelp
+fi

@@ -1,0 +1,9 @@
+## KEY MAP
+'atom-workspace atom-text-editor:not([mini])':
+  'alt-down': 'editor:move-line-down'
+  'alt-up': 'editor:move-line-up'
+'.tree-view':
+  'shift-R': 'tree-view:move'
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/

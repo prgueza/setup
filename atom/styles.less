@@ -1,0 +1,20 @@
+// STYLES
+atom-text-editor .highlights {
+  // Box
+  .highlight-selected .region {
+    border-color: rgba(54, 60, 71, 1);
+    border-radius: 0px;
+    border-width: 2px;
+    border-style: solid
+  }
+  // Background (set in settings)
+  .highlight-selected.background .region {
+    background-color: rgba(54, 60, 71, 0.6);
+  }
+}
+
+.icon[data-name^=".env"]:before{
+    color: inherit !important;
+    font-family: Devicons;
+    content: "\E699";
+}
