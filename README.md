@@ -1,14 +1,14 @@
-# Setup
+# ⚙️ Setup
 
-### 1. Clone the repository:
+### 1. Clone the repository 🐙
 
 ```sh
 $ git clone git@github.com:pedro-rodalia/setup.git ~/code/setup
 ```
 
-### 2. Install oh-my-zsh
+### 2. Install oh-my-zsh 🥳
 
-First check `homebrew` and `zsh` version using:
+First check `homebrew`  and `zsh` version using:
 
 ```sh
 $ brew --version
@@ -59,7 +59,7 @@ alias grestore="cp ~/code/setup/git/.gitconfig ~/.gitconfig"
 alias galias="git config --get-regexp ^alias\."
 ```
 
-### 3. Setup Git
+### 3. Setup Git 🎉
 
 Setup Git using the `grestore` command provided by the `.zshrc` file:
 
@@ -67,7 +67,7 @@ Setup Git using the `grestore` command provided by the `.zshrc` file:
 $ grestore
 ```
 
-### 4. Install hyper.js
+### 4. Install hyper.js ⚡️
 
 Install `hyper` using `homebrew` or [download](https://releases.hyper.is/download/mac) the app from their website. Then replace the `.hyper.js` configuration file with the one from this repo using the `hrestore` command provided by the `.zshrc` file:
 
@@ -76,7 +76,7 @@ $ brew install --cask hyper
 $ hrestore
 ```
 
-### 5. Install node and n
+### 5. Install node and n 🎁
 
 Install `n` using `homebrew`:
 
@@ -100,7 +100,7 @@ Install `node` stable version
 $ n stable
 ```
 
-### 6. Install Atom
+### 6. Install Atom 🙌🏼
 
 Install `atom` using `homebrew` or [download](https://atom.io/download/mac) the app from their website. Then install atom packages and replace the config files using the `arestore` command provided by the `.zshrc` file:
 
@@ -109,7 +109,7 @@ $ brew install --cask atom
 $ arestore
 ```
 
-### 7. Install thefuck (optional)
+### 7. Install thefuck 🙃
 
 Install `thefuck` app using `home brew`:
 
