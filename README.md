@@ -3,19 +3,19 @@
 ### 1. Clone the repository:
 
 ```sh
-$ git clone git@github.com:pedro-rodalia/config.git ~/Code/config
+$ git clone git@github.com:pedro-rodalia/setup.git ~/code/setup
 ```
 
 ### 2. Install oh-my-zsh
 
-First check `home brew` and `zsh` version using:
+First check `homebrew` and `zsh` version using:
 
 ```sh
 $ brew --version
 $ zsh --version
 ```
 
-Install `home brew` and/or `zsh` in case they are not already installed:
+Install `homebrew` and/or `zsh` in case they are not already installed:
 
 ```sh
 # Install Home Brew
@@ -43,19 +43,19 @@ $ zalias
 alias c="clear"
 alias zconfig="vim $HOME/.zshrc"
 alias zrestart=". ~/.zshrc"
-alias zrestore="cp ~/code/config/zsh/.zshrc ~/.zshrc"
-alias zsave="cp ~/.zshrc ~/code/config/zsh/.zshrc"
+alias zrestore="cp ~/code/setup/zsh/.zshrc ~/.zshrc"
+alias zsave="cp ~/.zshrc ~/code/setup/zsh/.zshrc"
 alias zalias="more ~/.zshrc | grep ^alias"
-alias asave="apm list --installed --bare > ~/code/config/atom/atom-packages.txt && cp ~/.atom/*.{cson,less} ~/code/config/atom/"
-alias arestore="apm install --packages-file ~/code/config/atom/atom-packages.txt && cp ~/code/config/atom/*.{cson,less} ~/.atom/"
+alias asave="apm list --installed --bare > ~/code/setup/atom/atom-packages.txt && cp ~/.atom/*.{cson,less} ~/code/setup/atom/"
+alias arestore="apm install --packages-file ~/code/setup/atom/atom-packages.txt && cp ~/code/setup/atom/*.{cson,less} ~/.atom/"
 alias aconfig="vim ~/.atom/config.cson"
 alias astyles="vim ~/.atom/styles.less"
 alias akeymap="vim ~/.atom/keymap.cson"
 alias asnippets="vim ~/.atom/snippets.cson"
-alias hsave="cp ~/.hyper.js ~/code/config/hyper/.hyper.js"
-alias hrestore="cp ~/code/config/hyper/.hyper.js ~/.hyper.js"
-alias gsave="cp ~/.gitconfig ~/code/config/git/.gitconfig"
-alias grestore="cp ~/code/config/git/.gitconfig ~/.gitconfig"
+alias hsave="cp ~/.hyper.js ~/code/setup/hyper/.hyper.js"
+alias hrestore="cp ~/code/setup/hyper/.hyper.js ~/.hyper.js"
+alias gsave="cp ~/.gitconfig ~/code/setup/git/.gitconfig"
+alias grestore="cp ~/code/setup/git/.gitconfig ~/.gitconfig"
 alias galias="git config --get-regexp ^alias\."
 ```
 
@@ -69,15 +69,16 @@ $ grestore
 
 ### 4. Install hyper.js
 
-[Download](https://releases.hyper.is/download/mac) the app from their website and replace the `.hyper.js` file with the one from this repo using the `hrestore` command provided by the `.zshrc` file:
+Install `hyper` using `homebrew` or [download](https://releases.hyper.is/download/mac) the app from their website. Then replace the `.hyper.js` configuration file with the one from this repo using the `hrestore` command provided by the `.zshrc` file:
 
 ```sh
+$ brew install --cask hyper
 $ hrestore
 ```
 
 ### 5. Install node and n
 
-Install `n` using `home brew`:
+Install `n` using `homebrew`:
 
 ```sh
 $ brew install n
@@ -101,9 +102,10 @@ $ n stable
 
 ### 6. Install Atom
 
-[Download](https://atom.io/download/mac) the app from their website and install atom packages and replace the config files using the `arestore` command provided by the `.zshrc` file:
+Install `atom` using `homebrew` or [download](https://atom.io/download/mac) the app from their website. Then install atom packages and replace the config files using the `arestore` command provided by the `.zshrc` file:
 
 ```sh
+$ brew install --cask atom
 $ arestore
 ```
 

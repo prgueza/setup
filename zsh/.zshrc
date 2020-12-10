@@ -30,25 +30,25 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias zconfig="vim $HOME/.zshrc"
 alias zrestart=". ~/.zshrc"
-alias zrestore="cp ~/code/config/zsh/.zshrc ~/.zshrc"
-alias zsave="cp ~/.zshrc ~/code/config/zsh/.zshrc"
+alias zrestore="cp ~/code/setup/zsh/.zshrc ~/.zshrc"
+alias zsave="cp ~/.zshrc ~/code/setup/zsh/.zshrc"
 alias zalias="more ~/.zshrc | grep ^alias"
 
 ### ATOM
-alias asave="apm list --installed --bare > ~/code/config/atom/atom-packages.txt && cp ~/.atom/*.{cson,less} ~/code/config/atom/"
-alias arestore="apm install --packages-file ~/code/config/atom/atom-packages.txt && cp ~/code/config/atom/*.{cson,less} ~/.atom/"
-alias aconfig="vim ~/.atom/config.cson"
+alias asave="apm list --installed --bare > ~/code/setup/atom/atom-packages.txt && cp ~/.atom/*.{cson,less} ~/code/setup/atom/"
+alias arestore="apm install --packages-file ~/code/setup/atom/atom-packages.txt && cp ~/code/setup/atom/*.{cson,less} ~/.atom/"
+alias aconfig="vim ~/.atom/setup.cson"
 alias astyles="vim ~/.atom/styles.less"
 alias akeymap="vim ~/.atom/keymap.cson"
 alias asnippets="vim ~/.atom/snippets.cson"
 
 ### HYPER
-alias hsave="cp ~/.hyper.js ~/code/config/hyper/.hyper.js"
-alias hrestore="cp ~/code/config/hyper/.hyper.js ~/.hyper.js"
+alias hsave="cp ~/.hyper.js ~/code/setup/hyper/.hyper.js"
+alias hrestore="cp ~/code/setup/hyper/.hyper.js ~/.hyper.js"
 
 ### GIT
-alias gsave="cp ~/.gitconfig ~/code/config/git/.gitconfig"
-alias grestore="cp ~/code/config/git/.gitconfig ~/.gitconfig"
+alias gsave="cp ~/.gitconfig ~/code/setup/git/.gitconfig"
+alias grestore="cp ~/code/setup/git/.gitconfig ~/.gitconfig"
 alias galias="git config --get-regexp ^alias\."
 
 eval $(thefuck --alias)
